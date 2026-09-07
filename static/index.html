@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASH // SYSTEM MONITOR</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">LOCAL NODE // LIVE TELEMETRY</p>
+        <h1>ASH // SYSTEM MONITOR</h1>
+      </div>
+      <div class="status-box">
+        <span class="status-dot"></span>
+        <span id="status">CONNECTING</span>
+      </div>
+    </header>
+
+    <section class="hero-grid">
+      <article class="card identity-card">
+        <span class="label">HOSTNAME</span>
+        <strong id="hostname">---</strong>
+
+        <div class="detail-grid">
+          <div>
+            <span class="label">OS</span>
+            <p id="os">---</p>
+          </div>
+          <div>
+            <span class="label">LOCAL IP</span>
+            <p id="localIp">---</p>
+          </div>
+          <div>
+            <span class="label">PROCESSES</span>
+            <p id="processCount">---</p>
+          </div>
+          <div>
+            <span class="label">UPTIME</span>
+            <p id="uptime">---</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card terminal">
+        <div class="terminal-top">
+          <span></span><span></span><span></span>
+        </div>
+        <div id="terminalLog">
+          <p>&gt; initializing telemetry...</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="metrics-grid">
+      <article class="card metric-card">
+        <div class="metric-heading">
+          <span>CPU LOAD</span>
+          <strong id="cpuValue">0%</strong>
+        </div>
+        <div class="bar"><div id="cpuBar"></div></div>
+      </article>
+
+      <article class="card metric-card">
+        <div class="metric-heading">
+          <span>MEMORY</span>
+          <strong id="ramValue">0%</strong>
+        </div>
+        <div class="bar"><div id="ramBar"></div></div>
+        <p class="subtext" id="ramText">0 / 0 GB</p>
+      </article>
+
+      <article class="card metric-card">
+        <div class="metric-heading">
+          <span>DISK</span>
+          <strong id="diskValue">0%</strong>
+        </div>
+        <div class="bar"><div id="diskBar"></div></div>
+        <p class="subtext" id="diskText">0 / 0 GB</p>
+      </article>
+
+      <article class="card metric-card">
+        <div class="metric-heading">
+          <span>NETWORK</span>
+          <strong>LIVE</strong>
+        </div>
+        <div class="network-row">
+          <span>↓ <b id="download">0 KB/s</b></span>
+          <span>↑ <b id="upload">0 KB/s</b></span>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <span id="timestamp">---</span>
+      <span>Python + psutil // localhost only</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
