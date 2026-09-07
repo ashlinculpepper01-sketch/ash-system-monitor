@@ -36,7 +36,7 @@ Run the project and add your own screenshot here:
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/ash-system-monitor.git
+git clone https://github.com/ashlinculpepper01-sketch/ash-system-monitor.git
 cd ash-system-monitor
 ```
 
